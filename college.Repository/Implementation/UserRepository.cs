@@ -1,6 +1,7 @@
 ﻿using college.Database;
 using college.Models;
 using college.Repository.Contract;
+using college.Repository.Implementation.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,12 +10,13 @@ using System.Threading.Tasks;
 
 namespace college.Repository.Implementation
 {
-    public class UserRepository : IUserRepository
-    {
-        private ColeegeDataContext db = new ColeegeDataContext();
-        public List<User> Users()
+    public class UserRepository : Repository<User>,IUserRepository
+    { 
+        private readonly ColeegeDataContext _context;
+        public UserRepository(ColeegeDataContext context):base(context)
         {
-            return db.Users.ToList();
+            this._context = context;
         }
+        
     }
 }

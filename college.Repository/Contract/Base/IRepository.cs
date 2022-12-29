@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace college.Repository.Contract.Base
 {
-    internal interface IRepository<T> where T : BaseModel, new()
+    public interface IRepository<T> where T : BaseModel, new()
     {
         Task<T> GetById(int id);
         Task<IEnumerable<T>> GetAll();
