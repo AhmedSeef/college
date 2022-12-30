@@ -207,6 +207,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -298,13 +299,17 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\college.BL\college.BL.csproj">
+      <Project>{1f58e0a1-053b-4b82-ac3d-0f20a4c6291a}</Project>
+      <Name>college.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\college.DTO\college.DTO.csproj">
+      <Project>{a7aa23d1-fefb-4a46-b699-4f708ca04238}</Project>
+      <Name>college.DTO</Name>
+    </ProjectReference>
     <ProjectReference Include="..\college.Models\college.Models.csproj">
       <Project>{308AA8C9-6BB5-45D1-8050-87759CB3FC5B}</Project>
       <Name>college.Models</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\college.Repository\college.Repository.csproj">
-      <Project>{b4bcd745-8037-47a1-945f-bfd70d303291}</Project>
-      <Name>college.Repository</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
