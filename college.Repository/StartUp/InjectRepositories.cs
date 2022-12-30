@@ -15,7 +15,8 @@ namespace college.Repository.StartUp
     public class InjectRepositories
     {
         public static void RegisterComponents(UnityContainer container)
-        {           
+        {
+            container.RegisterType(typeof(IRepository<>), typeof(Repository<>));
             container.RegisterType<IUserRepository, UserRepository>();           
             container.RegisterType<IUnitOfWork, UnitOfWork>();           
         }
