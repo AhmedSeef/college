@@ -19,5 +19,35 @@ namespace college.BL.Implementation
             _repository = repository;
             _unitOfWork = unitOfWork;
         }
+
+        #region user regiset
+        public async Task<bool> Register(User User, string Password)
+        {
+            CreatePasswordHash(Password, out var passwordHash, out var passwordSalt);
+
+            User.PasswordHash = passwordHash;
+            User.PasswordSalt = passwordSalt;
+
+            _unitOfWork.UserRepository.Insert(User);
+
+            return await _unitOfWork.complete();
+        }
+
+        public async Task<bool> UserExist(string email)
+        {
+            return await _unitOfWork.UserRepository.UserExist(email);
+        }
+
+        private void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
+        {
+            using (var hmac = new System.Security.Cryptography.HMACSHA512())
+            {
+                passwordSalt = hmac.Key;
+                passwordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password));
+            }
+
+        }
+
+        #endregion
     }
 }
