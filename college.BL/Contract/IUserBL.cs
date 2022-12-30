@@ -12,5 +12,6 @@ namespace college.BL.Contract
     {
         Task<bool> Register(User User, string Password);
         Task<bool> UserExist(string Name);
+        Task<User> Login(string name, string password);
     }
 }

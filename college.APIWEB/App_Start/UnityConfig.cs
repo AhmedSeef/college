@@ -1,5 +1,7 @@
+using Antlr.Runtime;
 using AutoMapper;
 using college.APIWEB.Mapper;
+using college.APIWEB.Token;
 using college.BL.Contract;
 using college.BL.Contract.Base;
 using college.BL.Implementation;
@@ -24,6 +26,7 @@ namespace college.APIWEB
             });
             var mapper = configuration.CreateMapper();
             container.RegisterInstance(mapper);
+            container.RegisterType<ITokenApp, TokenApp>();
             GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
         }
     }
