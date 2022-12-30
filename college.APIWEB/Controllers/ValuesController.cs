@@ -1,6 +1,4 @@
-﻿using college.Repository.Contract;
-using college.Repository.Implementation;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -11,13 +9,6 @@ namespace college.APIWEB.Controllers
 {
     public class ValuesController : ApiController
     {
-        // private UserRepository db = new UserRepository();
-        private readonly IUserRepository _userRepository;
-        public ValuesController(IUserRepository userRepository)
-        {
-            _userRepository = userRepository;
-        }
-
         // GET api/values
         public IEnumerable<string> Get()
         {
