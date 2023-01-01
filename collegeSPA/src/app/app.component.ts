@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  isLoggedIn: boolean = false;
   title = 'collegeSPA';
+
+  changeLoginSataus(status: any) {
+    this.isLoggedIn = status;
+  }
 }
