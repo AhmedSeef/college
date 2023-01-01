@@ -1,4 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { localStorageservice } from '../shared/localStorage.service';
+import { TokenService } from '../shared/token.service';
+
 
 @Component({
   selector: 'app-nav-menu',
@@ -7,12 +10,13 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class NavMenuComponent implements OnInit {
   @Output() loggedin = new EventEmitter<boolean>();
-  constructor() { }
+  constructor(private localStorage: localStorageservice, private tokenService: TokenService) { }
 
   ngOnInit(): void {
   }
 
   logOut() {
-    this.loggedin.emit(false)
+    this.localStorage.removeLocalStoarge("token");
+    this.loggedin.emit(this.tokenService.checkLogin("token"))
   }
 }
