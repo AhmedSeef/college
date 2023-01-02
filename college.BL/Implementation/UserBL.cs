@@ -1,5 +1,4 @@
 ﻿using college.BL.Contract;
-using college.BL.Implementation.Base;
 using college.Models;
 using college.Repository.Contract.Base;
 using System;
@@ -10,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace college.BL.Implementation
 {
-    public class UserBL : BL<User>, IUserBL
+    public class UserBL : IUserBL
     {
         private readonly IRepository<User> _repository;
         private readonly IUnitOfWork _unitOfWork;
-        public UserBL(IUnitOfWork unitOfWork, IRepository<User> repository) : base(unitOfWork, repository)
+        public UserBL(IUnitOfWork unitOfWork, IRepository<User> repository) 
         {
             _repository = repository;
             _unitOfWork = unitOfWork;

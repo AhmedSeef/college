@@ -75,6 +75,8 @@
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="Contract\Base\IRepository.cs" />
     <Compile Include="Contract\Base\IUnitOfWork.cs" />
+    <Compile Include="Implementation\CourseRepository.cs" />
+    <Compile Include="Contract\ICourseRepository.cs" />
     <Compile Include="Contract\IUserRepository.cs" />
     <Compile Include="Implementation\Base\Repository.cs" />
     <Compile Include="Implementation\Base\UnitOfWork.cs" />

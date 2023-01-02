@@ -8,9 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Unity;
-using college.BL.Contract.Base;
 using college.BL.Contract;
-using college.BL.Implementation.Base;
 using college.BL.Implementation;
 using college.Repository.StartUp;
 
@@ -20,9 +18,8 @@ namespace college.BL.SartUp
     {
         public static void RegisterComponents(UnityContainer container)
         {
-            InjectRepositories.RegisterComponents(container);
-            container.RegisterType(typeof(IBL<>), typeof(BL<>));
-            container.RegisterType<IUserBL, UserBL>();            
+            InjectRepositories.RegisterComponents(container);           
+            container.RegisterType<IUserBL, UserBL>();  
         }
     }
 }

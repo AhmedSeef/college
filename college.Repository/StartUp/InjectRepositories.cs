@@ -1,4 +1,5 @@
-﻿using college.Repository.Contract;
+﻿using college.BL.Implementation;
+using college.Repository.Contract;
 using college.Repository.Contract.Base;
 using college.Repository.Implementation;
 using college.Repository.Implementation.Base;
@@ -18,6 +19,7 @@ namespace college.Repository.StartUp
         {
             container.RegisterType(typeof(IRepository<>), typeof(Repository<>));
             container.RegisterType<IUserRepository, UserRepository>();           
+            container.RegisterType<ICourseRepository, CourseRepository>();           
             container.RegisterType<IUnitOfWork, UnitOfWork>();           
         }
     }

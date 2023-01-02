@@ -1,4 +1,5 @@
-﻿using college.Database;
+﻿using college.BL.Implementation;
+using college.Database;
 using college.Repository.Contract;
 using college.Repository.Contract.Base;
 using System;
@@ -18,6 +19,9 @@ namespace college.Repository.Implementation.Base
         }
         public IUserRepository userRepository { get; }
         public IUserRepository UserRepository => userRepository ?? new UserRepository(_context);
+
+        public ICourseRepository courseRepository { get; }
+        public ICourseRepository CourseRepository => courseRepository ?? new CourseRepository(_context);
 
         public async Task<bool> complete()
         {

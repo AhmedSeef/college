@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\BaseDTO.cs" />
+    <Compile Include="CourseDto.cs" />
     <Compile Include="LoginRequestDto.cs" />
     <Compile Include="LoginResponseDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

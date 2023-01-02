@@ -11,9 +11,14 @@ namespace college.APIWEB.Mapper
         {
             CreateMap<UserRegisterDto, User>()
                 .ForMember(dest => dest.UserName, o => o.MapFrom(src => src.Username));
-
             CreateMap<User, UserRegisterDto>()
                .ForMember(dest => dest.Username, o => o.MapFrom(src => src.UserName));
+
+
+            CreateMap<CourseDto, Course>()
+               .ForMember(dest => dest.Name, o => o.MapFrom(src => src.CourseName));
+            CreateMap<Course, CourseDto>()
+               .ForMember(dest => dest.CourseName, o => o.MapFrom(src => src.Name));
         }
         
     }

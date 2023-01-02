@@ -3,6 +3,7 @@ using college.APIWEB.Token;
 using college.BL.Contract;
 using college.DTO;
 using college.Models;
+using college.Repository.Contract.Base;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
@@ -22,13 +23,15 @@ namespace college.APIWEB.Controllers
         private readonly IUserBL _userRepository;
         private readonly IMapper _mapper;
         private readonly ITokenApp _tokenApp;
-       
+        private readonly IUnitOfWork _unitOfWork;
 
-        public UserController(IUserBL userRepository, IMapper mapper, ITokenApp tokenApp)
+
+        public UserController(IUserBL userRepository, IMapper mapper, ITokenApp tokenApp,IUnitOfWork unitOfWork)
         {
             _userRepository = userRepository;
             _mapper = mapper;
             _tokenApp = tokenApp;
+            _unitOfWork = unitOfWork;
         }
 
 
@@ -40,7 +43,7 @@ namespace college.APIWEB.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (await _userRepository.CheckExit(x=> x.UserName == userRegister.Username))
+                if (await _unitOfWork.UserRepository.CheckExit(x=> x.UserName == userRegister.Username))
                 {
                     return BadRequest("user name already exists");
                 }               
@@ -57,7 +60,7 @@ namespace college.APIWEB.Controllers
         [ActionName("login")]
         public async Task<IHttpActionResult> login(LoginRequestDto login )
         {
-            if (!await _userRepository.CheckExit(x=>x.UserName == login.Username))
+            if (!await _unitOfWork.UserRepository.CheckExit(x=>x.UserName == login.Username))
             {
                 return BadRequest("no user name with this name" + login.Username);
             }

@@ -9,6 +9,7 @@ namespace college.Repository.Contract.Base
     public interface IUnitOfWork : IDisposable
     {
         IUserRepository UserRepository { get; }       
+        ICourseRepository CourseRepository { get; }       
         Task<bool> complete();
     }
 }

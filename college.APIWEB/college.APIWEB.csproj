@@ -239,6 +239,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
@@ -348,6 +349,10 @@
     <ProjectReference Include="..\college.Models\college.Models.csproj">
       <Project>{308AA8C9-6BB5-45D1-8050-87759CB3FC5B}</Project>
       <Name>college.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\college.Repository\college.Repository.csproj">
+      <Project>{B4BCD745-8037-47A1-945F-BFD70D303291}</Project>
+      <Name>college.Repository</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

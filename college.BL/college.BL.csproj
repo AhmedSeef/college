@@ -50,9 +50,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contract\Base\IBL.cs" />
     <Compile Include="Contract\IUserBL.cs" />
-    <Compile Include="Implementation\Base\BL.cs" />
     <Compile Include="Implementation\UserBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SartUp\InjectBL.cs" />
