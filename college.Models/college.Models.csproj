@@ -52,7 +52,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\BaseModel.cs" />
+    <Compile Include="Base\IBirthDateBase.cs" />
+    <Compile Include="Base\INameBase.cs" />
+    <Compile Include="Course.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Student.cs" />
+    <Compile Include="Subject.cs" />
+    <Compile Include="Teacher.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>

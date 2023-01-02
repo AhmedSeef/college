@@ -55,9 +55,38 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ColeegeDataContext.cs" />
+    <Compile Include="Mapping\SubjectMapping.cs" />
     <Compile Include="Migrations\202212292106407_AddUser.cs" />
     <Compile Include="Migrations\202212292106407_AddUser.designer.cs">
       <DependentUpon>202212292106407_AddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301020753078_AddcourseAndsubject.cs" />
+    <Compile Include="Migrations\202301020753078_AddcourseAndsubject.designer.cs">
+      <DependentUpon>202301020753078_AddcourseAndsubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301020755045_EditCourseMistake.cs" />
+    <Compile Include="Migrations\202301020755045_EditCourseMistake.designer.cs">
+      <DependentUpon>202301020755045_EditCourseMistake.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301020802353_AddStudentAndTeacher.cs" />
+    <Compile Include="Migrations\202301020802353_AddStudentAndTeacher.designer.cs">
+      <DependentUpon>202301020802353_AddStudentAndTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301020803380_AddStudentAndTeacher2.cs" />
+    <Compile Include="Migrations\202301020803380_AddStudentAndTeacher2.designer.cs">
+      <DependentUpon>202301020803380_AddStudentAndTeacher2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301020940018_AddrelationbetweenModels.cs" />
+    <Compile Include="Migrations\202301020940018_AddrelationbetweenModels.designer.cs">
+      <DependentUpon>202301020940018_AddrelationbetweenModels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301020941298_EdittacheartableName.cs" />
+    <Compile Include="Migrations\202301020941298_EdittacheartableName.designer.cs">
+      <DependentUpon>202301020941298_EdittacheartableName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301020942199_EditStudenttableName.cs" />
+    <Compile Include="Migrations\202301020942199_EditStudenttableName.designer.cs">
+      <DependentUpon>202301020942199_EditStudenttableName.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -75,6 +104,27 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202212292106407_AddUser.resx">
       <DependentUpon>202212292106407_AddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301020753078_AddcourseAndsubject.resx">
+      <DependentUpon>202301020753078_AddcourseAndsubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301020755045_EditCourseMistake.resx">
+      <DependentUpon>202301020755045_EditCourseMistake.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301020802353_AddStudentAndTeacher.resx">
+      <DependentUpon>202301020802353_AddStudentAndTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301020803380_AddStudentAndTeacher2.resx">
+      <DependentUpon>202301020803380_AddStudentAndTeacher2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301020940018_AddrelationbetweenModels.resx">
+      <DependentUpon>202301020940018_AddrelationbetweenModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301020941298_EdittacheartableName.resx">
+      <DependentUpon>202301020941298_EdittacheartableName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301020942199_EditStudenttableName.resx">
+      <DependentUpon>202301020942199_EditStudenttableName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
