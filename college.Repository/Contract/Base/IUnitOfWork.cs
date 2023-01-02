@@ -10,6 +10,7 @@ namespace college.Repository.Contract.Base
     {
         IUserRepository UserRepository { get; }       
         ICourseRepository CourseRepository { get; }       
+        IStudentRepository StudentRepository { get; }       
         Task<bool> complete();
     }
 }

@@ -23,6 +23,9 @@ namespace college.Repository.Implementation.Base
         public ICourseRepository courseRepository { get; }
         public ICourseRepository CourseRepository => courseRepository ?? new CourseRepository(_context);
 
+        public IStudentRepository studentRepository { get; }
+        public IStudentRepository StudentRepository => studentRepository ?? new StudentRepository(_context);
+
         public async Task<bool> complete()
         {
             return await _context.SaveChangesAsync() > 0;
