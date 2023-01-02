@@ -1,5 +1,4 @@
-﻿using college.Database.Mapping;
-using college.Models;
+﻿using college.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
