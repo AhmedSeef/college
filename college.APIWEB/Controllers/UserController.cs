@@ -57,7 +57,7 @@ namespace college.APIWEB.Controllers
         [ActionName("login")]
         public async Task<IHttpActionResult> login(LoginRequestDto login )
         {
-            if (!await _userRepository.UserExist(login.Username))
+            if (!await _userRepository.CheckExit(x=>x.UserName == login.Username))
             {
                 return BadRequest("no user name with this name" + login.Username);
             }
