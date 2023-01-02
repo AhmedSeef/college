@@ -10,8 +10,7 @@ namespace college.BL.Contract
 {
     public interface IUserBL : IBL<User>
     {
-        Task<bool> Register(User User, string Password);
-        Task<bool> UserExist(string Name);
+        Task<bool> Register(User User, string Password);       
         Task<User> Login(string name, string password);
     }
 }

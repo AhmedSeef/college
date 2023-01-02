@@ -40,6 +40,11 @@ namespace college.BL.Implementation.Base
            return  await _repository.GetWhere(predicate);
         }
 
+        public async Task<bool> CheckExit(Expression<Func<T, bool>> predicate)
+        {
+            return  await _repository.CheckExit(predicate);
+        }
+
         public void Insert(T entity)
         {
             _repository.Insert(entity);

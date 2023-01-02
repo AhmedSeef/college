@@ -40,7 +40,7 @@ namespace college.APIWEB.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (await _userRepository.UserExist(userRegister.Username))
+                if (await _userRepository.CheckExit(x=> x.UserName == userRegister.Username))
                 {
                     return BadRequest("user name already exists");
                 }               
