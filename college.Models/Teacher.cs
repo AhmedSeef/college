@@ -18,7 +18,6 @@ namespace college.Models
         [Required]
         public DateTime BirthDate { get ; set ; }
         [Required]
-        public double Salary { get; set; }
-        public Subject Subject { get; set; }
+        public double Salary { get; set; }       
     }
 }

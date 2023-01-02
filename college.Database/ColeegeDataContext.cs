@@ -29,14 +29,7 @@ namespace college.Database
             {
                 m.ToTable("StudentSubjects");
                 m.MapLeftKey("StudentID");
-                m.MapRightKey("SubjecteID");
-            });
-
-            modelBuilder.Configurations.Add(new SubjectMapping());
-
-         
-          
-
+                m.MapRightKey("SubjecteID");});           
 
             base.OnModelCreating(modelBuilder);
         }

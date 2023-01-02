@@ -19,11 +19,10 @@ namespace college.Models
 
         [ForeignKey("Course")]
         public int CourseId { get; set; }
-        public Course Course { get; set; }
-
-        [ForeignKey("Teacher")]
-        public int TeacherId { get; set; }
-        public Teacher Teacher { get; set; }
+        public Course Course { get; set; }      
         public List<Student> Students { get; set;}
+        public virtual Teacher Teacher { get; set; }
+        [ForeignKey("Teacher")]
+        public int? TeacherId { get; set; }
     }
 }
