@@ -34,7 +34,8 @@ namespace college.Database
 
             modelBuilder.Configurations.Add(new SubjectMapping());
 
-            
+         
+          
 
 
             base.OnModelCreating(modelBuilder);
