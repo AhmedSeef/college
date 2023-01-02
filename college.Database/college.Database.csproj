@@ -88,6 +88,10 @@
     <Compile Include="Migrations\202301020942199_EditStudenttableName.designer.cs">
       <DependentUpon>202301020942199_EditStudenttableName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202301021038563_EditStudentTableAddRegistrationNumber.cs" />
+    <Compile Include="Migrations\202301021038563_EditStudentTableAddRegistrationNumber.designer.cs">
+      <DependentUpon>202301021038563_EditStudentTableAddRegistrationNumber.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -125,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202301020942199_EditStudenttableName.resx">
       <DependentUpon>202301020942199_EditStudenttableName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301021038563_EditStudentTableAddRegistrationNumber.resx">
+      <DependentUpon>202301021038563_EditStudentTableAddRegistrationNumber.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -20,6 +20,8 @@ namespace college.Models
         public string Name { get ; set ; }
         [Required]
         public DateTime BirthDate { get ; set ; }
+        [Required]       
+        public string RegistrationNumber { get; set; }
         public List<Subject> Subjects { get; set ; }
     }
 }
