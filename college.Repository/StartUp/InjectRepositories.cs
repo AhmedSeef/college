@@ -21,6 +21,7 @@ namespace college.Repository.StartUp
             container.RegisterType<IUserRepository, UserRepository>();           
             container.RegisterType<ICourseRepository, CourseRepository>();           
             container.RegisterType<IStudentRepository, StudentRepository>();           
+            container.RegisterType<ITeacherRepository, TeacherRepository>();           
             container.RegisterType<IUnitOfWork, UnitOfWork>();           
         }
     }
