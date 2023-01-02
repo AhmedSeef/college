@@ -7,6 +7,7 @@ using System.Data.Entity;
 using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -27,6 +28,18 @@ namespace college.Repository.Implementation.Base
         public async Task<IEnumerable<T>> GetAll()
         {
             return await _context.Set<T>().ToListAsync();
+        }
+        public IEnumerable<T> Include(params Expression<Func<T, object>>[] includes)
+        {
+            IDbSet<T> dbSet = _context.Set<T>();
+
+            IEnumerable<T> query = null;
+            foreach (var include in includes)
+            {
+                query = dbSet.Include(include);
+            }
+
+            return query ?? dbSet;
         }
 
         public async Task<T> GetById(int id)

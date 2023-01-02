@@ -12,6 +12,7 @@ namespace college.Repository.Contract.Base
     {
         Task<T> GetById(int id);
         Task<IEnumerable<T>> GetAll();
+        IEnumerable<T> Include(params Expression<Func<T, object>>[] includes);
         Task<IEnumerable<T>> GetWhere(Expression<Func<T, bool>> predicate);
         void Insert(T entity);
         void Update(T entity);
