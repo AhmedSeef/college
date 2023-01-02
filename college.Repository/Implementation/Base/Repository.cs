@@ -52,6 +52,10 @@ namespace college.Repository.Implementation.Base
             return await _context.Set<T>().Where(predicate).ToListAsync();
         }
 
+        public async Task<bool> CheckExit(Expression<Func<T, bool>> predicate)
+        {
+            return await _context.Set<T>().AnyAsync(predicate);
+        }
         public void Insert(T entity)
         {
             _context.Set<T>().Add(entity);

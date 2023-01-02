@@ -58,9 +58,9 @@ namespace college.BL.Implementation
             return await _unitOfWork.complete();
         }
 
-        public async Task<bool> UserExist(string email)
+        public async Task<bool> UserExist(string name)
         {
-            return await _unitOfWork.UserRepository.UserExist(email);
+            return await _unitOfWork.UserRepository.CheckExit(x=>x.UserName == name);
         }
 
         private void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)

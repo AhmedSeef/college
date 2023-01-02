@@ -17,11 +17,6 @@ namespace college.Repository.Implementation
         public UserRepository(ColeegeDataContext context):base(context)
         {
             this._context = context;
-        }
-
-        public async Task<bool> UserExist(string Name)
-        {
-            return await _context.Users.AnyAsync(x=>x.UserName == Name);
-        }
+        }        
     }
 }

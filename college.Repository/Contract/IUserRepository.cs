@@ -10,6 +10,6 @@ namespace college.Repository.Contract
 {
     public interface IUserRepository : IRepository<User>
     {
-        Task<bool> UserExist(string Name);
+        
     }
 }

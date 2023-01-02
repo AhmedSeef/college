@@ -14,6 +14,7 @@ namespace college.Repository.Contract.Base
         Task<IEnumerable<T>> GetAll();
         IEnumerable<T> Include(params Expression<Func<T, object>>[] includes);
         Task<IEnumerable<T>> GetWhere(Expression<Func<T, bool>> predicate);
+        Task<bool> CheckExit(Expression<Func<T, bool>> predicate);
         void Insert(T entity);
         void Update(T entity);
         void Delete(T entity);
