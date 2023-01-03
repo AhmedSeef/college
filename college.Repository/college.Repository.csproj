@@ -76,6 +76,7 @@
     <Compile Include="Contract\Base\IRepository.cs" />
     <Compile Include="Contract\Base\IUnitOfWork.cs" />
     <Compile Include="Contract\IStudentRepository.cs" />
+    <Compile Include="Contract\ISubjectRepository.cs" />
     <Compile Include="Contract\ITeacherRepository.cs" />
     <Compile Include="Implementation\CourseRepository.cs" />
     <Compile Include="Contract\ICourseRepository.cs" />
@@ -83,6 +84,7 @@
     <Compile Include="Implementation\Base\Repository.cs" />
     <Compile Include="Implementation\Base\UnitOfWork.cs" />
     <Compile Include="Implementation\StudentRepository.cs" />
+    <Compile Include="Implementation\SubjectRepository.cs" />
     <Compile Include="Implementation\TeacherRepository.cs" />
     <Compile Include="Implementation\UserRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

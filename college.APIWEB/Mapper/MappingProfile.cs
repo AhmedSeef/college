@@ -40,6 +40,16 @@ namespace college.APIWEB.Mapper
               .ForMember(dest => dest.TeacherName, o => o.MapFrom(src => src.Name))
               .ForMember(dest => dest.TeacherSalary, o => o.MapFrom(src => src.Salary))
               .ForMember(dest => dest.TeacherBirthDate, o => o.MapFrom(src => src.BirthDate));
+
+            CreateMap<SubjectDto, Subject>()
+               .ForMember(dest => dest.Name, o => o.MapFrom(src => src.SubjectName))
+               .ForMember(dest => dest.TeacherId, o => o.MapFrom(src => src.TeacherId))
+               .ForMember(dest => dest.CourseId, o => o.MapFrom(src => src.CourseId));
+
+            CreateMap<Subject, SubjectDto>()
+              .ForMember(dest => dest.SubjectName, o => o.MapFrom(src => src.Name))
+              .ForMember(dest => dest.TeacherId, o => o.MapFrom(src => src.TeacherId))
+              .ForMember(dest => dest.CourseId, o => o.MapFrom(src => src.CourseId));
         }
         
     }

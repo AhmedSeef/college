@@ -12,6 +12,7 @@ namespace college.Repository.Contract.Base
         ICourseRepository CourseRepository { get; }       
         IStudentRepository StudentRepository { get; }       
         ITeacherRepository TeacherRepository { get; }       
+        ISubjectRepository SubjectRepository { get; }       
         Task<bool> complete();
     }
 }
